@@ -2,15 +2,14 @@
   <TrafficSign
     class="lights__green circle"
     :svg="svg"
-    v-bind:signActiveId="signActiveId"
-    v-bind:activeId="activeId"
+    v-bind:colorActive="colorActive"
   />
 </template>
 
 <script>
 import TrafficSign from "@/components/TrafficSign/TrafficSign";
 export default {
-  props: ["svg", "signActiveId", "activeId"],
+  props: ["svg", "colorActive"],
   components: {
     TrafficSign,
   },

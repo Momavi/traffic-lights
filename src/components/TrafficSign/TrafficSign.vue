@@ -1,11 +1,11 @@
 <template>
-  <div v-bind:class="{ active: signActiveId == activeId }">
+  <div v-bind:class="{ active: colorActive === true }">
     <img :src="svg" alt="sign" />
   </div>
 </template>
 
 <script>
 export default {
-  props: ["svg", "signActiveId", "activeId"],
+  props: ["svg", "colorActive"],
 };
 </script>

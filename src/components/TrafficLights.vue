@@ -1,21 +1,9 @@
 <template>
   <div class="lights">
     <div class="lights__wrapper">
-      <GreenSign
-        :svg="signWalk"
-        v-bind:signActiveId="signActiveId"
-        v-bind:activeId="signs[0].id"
-      />
-      <YellowSign
-        :svg="signStanding"
-        v-bind:signActiveId="signActiveId"
-        v-bind:activeId="signs[1].id"
-      />
-      <RedSign
-        :svg="signStop"
-        v-bind:signActiveId="signActiveId"
-        v-bind:activeId="signs[2].id"
-      />
+      <GreenSign :svg="signWalk" v-bind:colorActive="isActive(signs[0].id)" />
+      <YellowSign :svg="signStanding" v-bind:colorActive="isActive(signs[1].id)" />
+      <RedSign :svg="signStop" v-bind:colorActive="isActive(signs[2].id)" />
     </div>
     <div class="lights__stick"></div>
     <button @click="nextSign">Жми</button>
@@ -63,6 +51,9 @@ export default {
         }
       }
       return activeSign;
+    },
+    isActive(signsId) {
+      if (this.signActiveId === signsId) return true;
     },
   },
 };
