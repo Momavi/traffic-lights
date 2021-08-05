@@ -3,19 +3,19 @@
     <div class="lights__wrapper">
       <TraficItem
         class="lights__green circle"
-        :svg="lightWalk"
+        :svg="signWalk"
         v-bind:signActiveId="signActiveId"
         v-bind:activeId="signs[0].id"
       />
       <TraficItem
         class="lights__yellow circle"
-        :svg="lightStanding"
+        :svg="signStanding"
         v-bind:signActiveId="signActiveId"
         v-bind:activeId="signs[1].id"
       />
       <TraficItem
         class="lights__red circle"
-        :svg="lightStop"
+        :svg="signStop"
         v-bind:signActiveId="signActiveId"
         v-bind:activeId="signs[2].id"
       />
@@ -26,9 +26,9 @@
 </template>
 
 <script>
-import lightWalk from "@/assets/lights-walk.svg";
-import lightStanding from "@/assets/lights-standing.svg";
-import lightStop from "@/assets/lights-stop.svg";
+import signWalk from "@/assets/sign-walk.svg";
+import signStanding from "@/assets/sign-standing.svg";
+import signStop from "@/assets/sign-stop.svg";
 
 import TraficItem from "@/components/TraficItem/TraficItem";
 
@@ -41,9 +41,9 @@ export default {
   },
   setup() {
     return {
-      lightWalk,
-      lightStanding,
-      lightStop,
+      signWalk,
+      signStanding,
+      signStop,
     };
   },
   components: {
