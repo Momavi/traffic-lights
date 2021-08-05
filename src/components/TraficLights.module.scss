@@ -1,0 +1,40 @@
+.circle {
+  width: 50px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid rgb(177, 177, 177);
+  border-radius: 30px;
+  transition: all 0.3s;
+  &:first-child {
+    margin-top: 20px;
+  }
+}
+.lights {
+  &__wrapper {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border: 5px solid #000;
+    border-radius: 30px;
+  }
+  &__green {
+    background-color: rgb(29, 236, 10);
+  }
+  &__yellow {
+    background-color: rgb(253, 249, 11);
+  }
+  &__red {
+    background-color: rgb(240, 9, 9);
+  }
+  &__stick {
+    width: 10px;
+    height: 220px;
+    background-color: #000;
+    margin: 0 auto;
+  }
+}
