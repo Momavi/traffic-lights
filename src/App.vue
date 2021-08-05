@@ -1,13 +1,13 @@
 <template>
-  <TraficLights v-bind:signs="signs" />
+  <TrafficLights v-bind:signs="signs" />
 </template>
 
 <script>
-import TraficLights from "./components/TraficLights.vue";
+import TrafficLights from "./components/TrafficLights.vue";
 
 export default {
   components: {
-    TraficLights,
+    TrafficLights,
   },
   data() {
     return {

@@ -1,20 +1,17 @@
 <template>
   <div class="lights">
     <div class="lights__wrapper">
-      <TraficItem
-        class="lights__green circle"
+      <GreenSign
         :svg="signWalk"
         v-bind:signActiveId="signActiveId"
         v-bind:activeId="signs[0].id"
       />
-      <TraficItem
-        class="lights__yellow circle"
+      <YellowSign
         :svg="signStanding"
         v-bind:signActiveId="signActiveId"
         v-bind:activeId="signs[1].id"
       />
-      <TraficItem
-        class="lights__red circle"
+      <RedSign
         :svg="signStop"
         v-bind:signActiveId="signActiveId"
         v-bind:activeId="signs[2].id"
@@ -30,7 +27,9 @@ import signWalk from "@/assets/sign-walk.svg";
 import signStanding from "@/assets/sign-standing.svg";
 import signStop from "@/assets/sign-stop.svg";
 
-import TraficItem from "@/components/TraficItem/TraficItem";
+import GreenSign from "@/components/Colors/GreenSign.vue";
+import YellowSign from "@/components/Colors/YellowSign.vue";
+import RedSign from "@/components/Colors/RedSign.vue";
 
 export default {
   props: ["signs"],
@@ -47,7 +46,9 @@ export default {
     };
   },
   components: {
-    TraficItem,
+    GreenSign,
+    YellowSign,
+    RedSign,
   },
   methods: {
     nextSign() {
@@ -68,5 +69,5 @@ export default {
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
-@import "./TraficLights.module.scss";
+@import "./TrafficLights.module.scss";
 </style>
