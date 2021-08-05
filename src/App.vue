@@ -1,16 +1,24 @@
 <template>
-  <TraficLights/>
+  <TraficLights v-bind:signs="signs" />
 </template>
 
 <script>
-import TraficLights from './components/TraficLights.vue'
+import TraficLights from "./components/TraficLights.vue";
 
 export default {
-  name: 'App',
   components: {
-    TraficLights
-  }
-}
+    TraficLights,
+  },
+  data() {
+    return {
+      signs: [
+        { id: 1, color: "green", active: true, timer: 15 },
+        { id: 2, color: "yellow", active: false, timer: 3 },
+        { id: 3, color: "red", active: false, timer: 10 },
+      ],
+    };
+  },
+};
 </script>
 
 <style>

@@ -5,9 +5,13 @@
   border: 1px solid rgb(177, 177, 177);
   border-radius: 30px;
   transition: all 0.3s;
+  opacity: 0.2;
   &:first-child {
     margin-top: 20px;
   }
+}
+.active{
+  opacity: 1;
 }
 .lights {
   &__wrapper {
